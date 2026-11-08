@@ -117,3 +117,4 @@ export function initHeroSlider() {
         startAutoplay();
     }
 }
+

@@ -35,7 +35,7 @@
     <div class="p-6 flex-1 flex flex-col justify-between">
         <div>
             <div class="flex items-center justify-between gap-2 mb-2">
-                <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-stark-primary">
+                <span class="text-[11px] font-mono font-semibold uppercase tracking-wider text-stark-primary">
                     {{ $specialty }}
                 </span>
                 <span class="text-[11px] font-mono text-slate-400">
@@ -43,12 +43,12 @@
                 </span>
             </div>
 
-            <h3 class="font-display font-bold text-lg text-stark-text group-hover:text-stark-primary transition-colors leading-snug text-pretty">
+            <h3 class="font-display font-semibold text-lg text-stark-text group-hover:text-stark-primary transition-colors leading-snug text-pretty tracking-tight">
                 {{ $name }}
             </h3>
 
             @if($description)
-                <p class="text-xs text-stark-muted mt-2 leading-relaxed text-pretty">
+                <p class="text-sm text-slate-600 mt-2.5 leading-relaxed text-pretty">
                     {{ $description }}
                 </p>
             @endif
@@ -56,7 +56,7 @@
 
         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
             <span class="text-[11px] text-slate-500 font-mono">Certified Facility</span>
-            <a href="#inquiry" class="inline-flex items-center gap-1 text-xs font-display font-semibold text-slate-700 group-hover:text-stark-primary rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">
+            <a href="#inquiry" class="inline-flex items-center gap-1 text-xs font-sans font-semibold text-slate-700 group-hover:text-stark-primary rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">
                 Audit Plant &rarr;
             </a>
         </div>

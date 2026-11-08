@@ -15,29 +15,36 @@ colors:
   text-muted: "#64748B"
   maritime-blue: "#2563EB"
 typography:
+  editorial:
+    fontFamily: "'Instrument Serif', Georgia, serif"
+    fontStyle: italic
+    fontWeight: 400
   display:
-    fontFamily: "Plus Jakarta Sans, system-ui, -apple-system, sans-serif"
+    fontFamily: "'Instrument Sans', ui-sans-serif, system-ui, sans-serif"
     fontSize: "3.75rem"
-    fontWeight: 800
-    lineHeight: 1.05
+    fontWeight: 600
+    lineHeight: 1.08
     letterSpacing: "-0.025em"
   headline:
-    fontFamily: "Plus Jakarta Sans, system-ui, -apple-system, sans-serif"
+    fontFamily: "'Instrument Sans', ui-sans-serif, system-ui, sans-serif"
     fontSize: "2.25rem"
-    fontWeight: 700
+    fontWeight: 600
     lineHeight: 1.15
-    letterSpacing: "-0.02em"
+    letterSpacing: "-0.025em"
   title:
-    fontFamily: "Plus Jakarta Sans, system-ui, -apple-system, sans-serif"
+    fontFamily: "'Instrument Sans', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.25rem"
     fontWeight: 600
     lineHeight: 1.3
-    letterSpacing: "-0.01em"
+    letterSpacing: "-0.015em"
   body:
-    fontFamily: "Inter, system-ui, -apple-system, sans-serif"
+    fontFamily: "'Instrument Sans', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
+  mono:
+    fontFamily: "'JetBrains Mono', monospace"
+    fontWeight: 500
     letterSpacing: "0em"
   label:
     fontFamily: "Plus Jakarta Sans, system-ui, -apple-system, sans-serif"
@@ -134,21 +141,22 @@ The palette balances Stark's energetic manufacturing crimson with deep carbon ob
 
 ## Typography
 
-**Display Font:** `Plus Jakarta Sans` (fallback: `system-ui, -apple-system, sans-serif`)  
-**Body Font:** `Inter` (fallback: `system-ui, -apple-system, sans-serif`)  
-**Technical/Numerics:** `JetBrains Mono` or `Plus Jakarta Sans` with `font-variant-numeric: tabular-nums`
+**Editorial Accent:** `Instrument Serif` (fallback: `Georgia, serif`)  
+**Interface & Display Font:** `Instrument Sans` (fallback: `ui-sans-serif, system-ui, sans-serif`)  
+**Technical/Numerics:** `JetBrains Mono` with `font-feature-settings: 'tnum' on, 'zero' on`
 
-**Character:** Confident, engineered, and utilitarian. Plus Jakarta Sans delivers sharp, modern geometric display weights, while Inter provides tireless legibility across technical specifications, production capacities, and contact matrices.
+**Character:** High-taste industrial atelier. Replaced generic neo-grotesque templates (Inter / Roboto / Poppins) with `Instrument Serif` for refined editorial emphasis alongside `Instrument Sans` for precision engineered clarity with tight optical tracking (`-0.025em`). Technical specifications, capacity counts, port identifiers, and export metrics are anchored by `JetBrains Mono` tabular figures.
 
 ### Hierarchy
-- **Display** (800 weight, `clamp(2.5rem, 5vw, 3.75rem)`, line-height `1.05`, tracking `-0.025em`): Hero impact statements, defining brand headlines.
-- **Headline** (700 weight, `clamp(1.75rem, 3vw, 2.25rem)`, line-height `1.15`, tracking `-0.02em`): Section titles (`SISTER CONCERNS`, `PRODUCTS`, `MONTHLY CAPACITY`).
-- **Title** (600 weight, `1.25rem` to `1.5rem`, line-height `1.3`, tracking `-0.01em`): Facility names, product names, article titles.
-- **Body** (400/500 weight, `1rem`, line-height `1.6`, measure `65-75ch`): Factory overviews, descriptive copy, specification bullets.
-- **Label / Technical** (600 weight, `0.75rem`, letter-spacing `0.05em`, uppercase): Metadata, certification badges, stat descriptors.
+- **Editorial Display** (400 italic, `clamp(2.5rem, 5vw, 3.75rem)`, line-height `1.08`, tracking `-0.015em`): Defining craft statements, editorial emphasis on key manufacturing hallmarks.
+- **Display & Section Headline** (500–600 weight, `clamp(1.75rem, 3.5vw, 2.5rem)`, line-height `1.15`, tracking `-0.025em`): Core section titles (`Sister Concern Facilities`, `Featured Luggage & Travel Gear`).
+- **Card Title** (600 weight, `1.125rem` to `1.25rem`, line-height `1.3`, tracking `-0.015em`): Plant facility names, product titles, operational pillars.
+- **Body** (400 weight, `1rem` / 16px, line-height `1.6`, measure `60-70ch`): Factory overviews, descriptive copy, specification bullets. Never 12px or 14px paragraphs.
+- **Label & Technical Data** (500–600 weight, `0.75rem` / 12px, tabular numbers, uppercase): Metadata, certification badges, port codes, capacity numbers.
 
 ### Named Rules
 **The No-Eyebrow Rule.** Never place a tiny kicker or eyebrow label above section headings. Let section headlines speak with their own scale, weight, and position.
+**The Editorial Accent Rule.** Pair stately grotesque section titles with deliberate `Instrument Serif` italic accents to elevate Stark Bags from an anonymous factory into a world-class luggage atelier.
 
 ---
 

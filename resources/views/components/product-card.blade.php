@@ -10,7 +10,7 @@
 <div {{ $attributes->merge(['class' => 'group relative bg-white border border-stark-border rounded-xl p-5 flex flex-col justify-between transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-slate-300']) }}>
     <!-- Card Header / Tags -->
     <div class="flex items-center justify-between mb-4">
-        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-display font-semibold uppercase tracking-wider bg-slate-100 text-slate-700">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-sans font-medium uppercase tracking-wider bg-slate-100 text-slate-700">
             {{ $category }}
         </span>
         @if($badge)
@@ -36,18 +36,18 @@
 
     <!-- Product Title & Details -->
     <div>
-        <h3 class="font-display font-bold text-base text-stark-text group-hover:text-stark-primary transition-colors text-pretty">
+        <h3 class="font-display font-semibold text-base text-stark-text group-hover:text-stark-primary transition-colors text-pretty tracking-tight leading-snug">
             {{ $title }}
         </h3>
-        <p class="text-xs text-stark-muted mt-1 font-mono">
+        <p class="text-xs text-slate-500 mt-1 font-mono">
             {{ $material }}
         </p>
 
         @if(!empty($features))
-            <ul class="mt-3 space-y-1 border-t border-slate-100 pt-3 text-[11px] text-slate-600">
+            <ul class="mt-3 space-y-1.5 border-t border-slate-100 pt-3 text-xs text-slate-600">
                 @foreach($features as $feature)
                     <li class="flex items-center gap-1.5">
-                        <span class="w-1 h-1 rounded-full bg-stark-primary" aria-hidden="true"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-stark-primary shrink-0" aria-hidden="true"></span>
                         <span>{{ $feature }}</span>
                     </li>
                 @endforeach
@@ -58,7 +58,7 @@
     <!-- Action -->
     <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
         <span class="text-[11px] font-mono text-slate-400">OEM / ODM Available</span>
-        <a href="#inquiry" class="inline-flex items-center gap-1 text-xs font-display font-semibold text-stark-primary hover:text-stark-primary-hover rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">
+        <a href="#inquiry" class="inline-flex items-center gap-1 text-xs font-sans font-semibold text-stark-primary hover:text-stark-primary-hover rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">
             Inquire Specs &rarr;
         </a>
     </div>

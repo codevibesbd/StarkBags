@@ -38,8 +38,8 @@
                 </div>
 
                 <!-- Headline (No Eyebrow Rule: Headline speaks with its own scale) -->
-                <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08] text-balance">
-                    Engineering Export-Grade Travel Gear & Luggage at Scale.
+                <h1 class="font-display font-medium text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08] text-balance">
+                    Engineering <span class="font-serif italic font-normal text-rose-300">Export-Grade</span> Travel Gear &amp; Luggage at Scale.
                 </h1>
 
                 <!-- Subtitle -->
@@ -49,10 +49,10 @@
 
                 <!-- Actions -->
                 <div class="flex flex-wrap items-center gap-4 pt-4">
-                    <a href="#inquiry" class="inline-flex items-center justify-center px-6 py-3.5 rounded-md bg-stark-primary text-white font-display text-sm font-bold uppercase tracking-wider hover:bg-stark-primary-hover active:scale-[0.98] transition-[background-color,transform] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-lg shadow-stark-primary/20">
+                    <a href="#inquiry" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-stark-primary text-white font-sans text-sm font-semibold tracking-wide hover:bg-stark-primary-hover active:scale-[0.98] transition-[background-color,transform] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-lg shadow-stark-primary/20">
                         Inquire for OEM / Contract Production
                     </a>
-                    <a href="#facilities" class="inline-flex items-center justify-center px-6 py-3.5 rounded-md bg-white/10 hover:bg-white/15 border border-white/20 text-white font-display text-sm font-semibold tracking-wide transition-[background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">
+                    <a href="#facilities" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 text-white font-sans text-sm font-medium tracking-wide transition-[background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">
                         Explore Sister Concern Plants &rarr;
                     </a>
                 </div>
@@ -103,10 +103,10 @@
                 <!-- Left: Signature Stark Crimson Block with 6 Key Live Metrics -->
                 <div class="lg:col-span-5 bg-stark-primary rounded-2xl p-8 lg:p-10 text-white flex flex-col justify-between shadow-xl">
                     <div>
-                        <h2 class="font-display font-black text-2xl lg:text-3xl text-white tracking-tight uppercase leading-snug text-balance">
-                            Heavy-Duty Production Powerhouse
+                        <h2 class="font-display font-semibold text-2xl lg:text-3xl text-white tracking-tight leading-snug text-balance">
+                            Heavy-Duty <span class="font-serif italic font-normal text-rose-200">Production</span> Powerhouse
                         </h2>
-                        <p class="text-rose-100 text-xs mt-3 leading-relaxed text-pretty">
+                        <p class="text-rose-100 text-sm mt-3 leading-relaxed text-pretty">
                             Complete vertical integration: from resin molding and hardware stamping to robotic cutting and automated sewing lines.
                         </p>
                     </div>
@@ -114,32 +114,32 @@
                     <!-- 6 Grid Stats with Tabular Numerals -->
                     <div class="grid grid-cols-2 gap-6 my-8 py-6 border-y border-white/20">
                         <div>
-                            <div class="font-display font-black text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">1.5M+</div>
-                            <div class="text-[11px] font-display font-semibold uppercase tracking-wider text-rose-200 mt-1">Pcs Monthly Output</div>
+                            <div class="font-display font-bold text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">1.5M+</div>
+                            <div class="text-[12px] font-sans font-medium uppercase tracking-wider text-rose-200 mt-1">Pcs Monthly Output</div>
                         </div>
                         <div>
-                            <div class="font-display font-black text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">5,000+</div>
-                            <div class="text-[11px] font-display font-semibold uppercase tracking-wider text-rose-200 mt-1">Skilled Workforce</div>
+                            <div class="font-display font-bold text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">5,000+</div>
+                            <div class="text-[12px] font-sans font-medium uppercase tracking-wider text-rose-200 mt-1">Skilled Workforce</div>
                         </div>
                         <div>
-                            <div class="font-display font-black text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">6</div>
-                            <div class="text-[11px] font-display font-semibold uppercase tracking-wider text-rose-200 mt-1">Sister Concern Units</div>
+                            <div class="font-display font-bold text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">6</div>
+                            <div class="text-[12px] font-sans font-medium uppercase tracking-wider text-rose-200 mt-1">Sister Concern Units</div>
                         </div>
                         <div>
-                            <div class="font-display font-black text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">9+</div>
-                            <div class="text-[11px] font-display font-semibold uppercase tracking-wider text-rose-200 mt-1">Years Manufacturing</div>
+                            <div class="font-display font-bold text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">9+</div>
+                            <div class="text-[12px] font-sans font-medium uppercase tracking-wider text-rose-200 mt-1">Years Manufacturing</div>
                         </div>
                         <div>
-                            <div class="font-display font-black text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">34+</div>
-                            <div class="text-[11px] font-display font-semibold uppercase tracking-wider text-rose-200 mt-1">Certifications</div>
+                            <div class="font-display font-bold text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">34+</div>
+                            <div class="text-[12px] font-sans font-medium uppercase tracking-wider text-rose-200 mt-1">Certifications</div>
                         </div>
                         <div>
-                            <div class="font-display font-black text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">7+</div>
-                            <div class="text-[11px] font-display font-semibold uppercase tracking-wider text-rose-200 mt-1">Export Continents</div>
+                            <div class="font-display font-bold text-3xl lg:text-4xl tracking-tight text-white font-mono tabular-nums">7+</div>
+                            <div class="text-[12px] font-sans font-medium uppercase tracking-wider text-rose-200 mt-1">Export Continents</div>
                         </div>
                     </div>
 
-                    <a href="#facilities" class="inline-flex items-center justify-between w-full p-4 rounded-xl bg-black/20 hover:bg-black/30 border border-white/20 text-xs font-display font-bold uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                    <a href="#facilities" class="inline-flex items-center justify-between w-full p-4 rounded-xl bg-black/20 hover:bg-black/30 border border-white/20 text-xs font-sans font-semibold uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
                         <span>Inspect Sister Concern Capabilities</span>
                         <span aria-hidden="true">&rarr;</span>
                     </a>
@@ -153,11 +153,11 @@
                             <img src="https://starkbags.com/wp-content/uploads/2025/02/rider-3-768x432-1.webp" alt="Rider Leather Bags Factory Facility" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
-                            <h3 class="font-display font-bold text-xl text-stark-text text-pretty">Who We Are</h3>
-                            <p class="text-xs text-stark-muted mt-2 leading-relaxed text-pretty">
+                            <h3 class="font-display font-semibold text-xl text-stark-text tracking-tight text-pretty">Who We Are</h3>
+                            <p class="text-sm text-slate-600 mt-2 leading-relaxed text-pretty font-sans">
                                 Stark Bag Industries Ltd. operates modern manufacturing compounds in Brahmanbaria and executive trade offices in Uttara, Dhaka. We serve top-tier retailers across North America, Europe, and Asia with uncompromising quality control.
                             </p>
-                            <a href="#facilities" class="inline-flex items-center gap-1 text-xs font-display font-semibold text-stark-primary hover:text-stark-primary-hover rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary mt-3 transition-colors">
+                            <a href="#facilities" class="inline-flex items-center gap-1 text-xs font-sans font-semibold text-stark-primary hover:text-stark-primary-hover rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary mt-3 transition-colors">
                                 Learn about corporate structure &rarr;
                             </a>
                         </div>
@@ -169,11 +169,11 @@
                             <img src="https://starkbags.com/wp-content/uploads/2025/02/Sensibal-qyx49htq0vcm9ibd8wky9ejdb0t3obd66qik4jxhn4.jpg" alt="Polymer Molding Factory Plant" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
-                            <h3 class="font-display font-bold text-xl text-stark-text text-pretty">What We Do</h3>
-                            <p class="text-xs text-stark-muted mt-2 leading-relaxed text-pretty">
+                            <h3 class="font-display font-semibold text-xl text-stark-text tracking-tight text-pretty">What We Do</h3>
+                            <p class="text-sm text-slate-600 mt-2 leading-relaxed text-pretty font-sans">
                                 Complete ODM and OEM production for polycarbonate hard-case luggage, water-repellent tech backpacks, weekender duffels, and utility tote bags. We maintain in-house tooling, zipper fabrication, and packaging.
                             </p>
-                            <a href="#products" class="inline-flex items-center gap-1 text-xs font-display font-semibold text-stark-primary hover:text-stark-primary-hover rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary mt-3 transition-colors">
+                            <a href="#products" class="inline-flex items-center gap-1 text-xs font-sans font-semibold text-stark-primary hover:text-stark-primary-hover rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary mt-3 transition-colors">
                                 Explore product capabilities &rarr;
                             </a>
                         </div>
@@ -185,11 +185,11 @@
                             <img src="https://starkbags.com/wp-content/uploads/2025/02/20241223_165355-1-768x491-1.jpg" alt="Sustainable Industry 4.0 Equipment" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
-                            <h3 class="font-display font-bold text-xl text-stark-text text-pretty">Sustainable Industry 4.0</h3>
-                            <p class="text-xs text-stark-muted mt-2 leading-relaxed text-pretty">
+                            <h3 class="font-display font-semibold text-xl text-stark-text tracking-tight text-pretty">Sustainable Industry 4.0</h3>
+                            <p class="text-sm text-slate-600 mt-2 leading-relaxed text-pretty font-sans">
                                 Operating under ISO 14001 environmental frameworks. We utilize computerized CNC fabric cutting to minimize off-cut waste, closed-loop polymer recycling, and full FSC certification for packaging materials.
                             </p>
-                            <a href="#certifications" class="inline-flex items-center gap-1 text-xs font-display font-semibold text-stark-primary hover:text-stark-primary-hover rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary mt-3 transition-colors">
+                            <a href="#certifications" class="inline-flex items-center gap-1 text-xs font-sans font-semibold text-stark-primary hover:text-stark-primary-hover rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary mt-3 transition-colors">
                                 View sustainability audits &rarr;
                             </a>
                         </div>
@@ -205,10 +205,10 @@
     <!-- ===================================================================== -->
     <section id="global-presence" class="py-24 bg-white border-b border-stark-border overflow-hidden scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-stark-text tracking-tight text-balance">
-                Global Export Footprint & Trade Corridors
+            <h2 class="font-display font-medium text-3xl sm:text-4xl text-stark-text tracking-tight text-balance">
+                Global Export Footprint &amp; <span class="font-serif italic font-normal text-stark-primary">Trade Corridors</span>
             </h2>
-            <p class="text-sm text-stark-muted mt-3 max-w-2xl mx-auto font-sans leading-relaxed text-pretty">
+            <p class="text-base text-stark-muted mt-3 max-w-2xl mx-auto font-sans leading-relaxed text-pretty">
                 From our manufacturing hubs in Brahmanbaria through Chittagong Port (BDCGP), Stark luggage and bags reach retail shelves across 7+ key international markets.
             </p>
 
@@ -219,18 +219,18 @@
                     <div class="flex items-center gap-3 text-left">
                         <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse motion-reduce:animate-none" aria-hidden="true"></div>
                         <div>
-                            <span class="font-display font-bold text-xs uppercase tracking-wider text-white">Live Maritime & Export Network</span>
+                            <span class="font-sans font-semibold text-xs uppercase tracking-wider text-white">Live Maritime &amp; Export Network</span>
                             <span class="text-[11px] font-mono text-slate-400 block">Origin: Chittagong Sea Port (BDCGP) &bull; Direct Carrier Contracts</span>
                         </div>
                     </div>
 
                     <!-- Region Selector Buttons -->
-                    <div class="flex flex-wrap items-center gap-2 font-display text-xs" role="group" aria-label="Trade Lane Filters">
-                        <button type="button" data-region="all" class="map-filter-btn active px-3 py-1.5 rounded-full bg-stark-primary text-white font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">All Corridors</button>
-                        <button type="button" data-region="na" class="map-filter-btn px-3 py-1.5 rounded-full bg-white/10 text-slate-300 font-semibold hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">North America</button>
-                        <button type="button" data-region="eu" class="map-filter-btn px-3 py-1.5 rounded-full bg-white/10 text-slate-300 font-semibold hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">European Union</button>
-                        <button type="button" data-region="asia" class="map-filter-btn px-3 py-1.5 rounded-full bg-white/10 text-slate-300 font-semibold hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Asia-Pacific</button>
-                        <button type="button" data-region="me" class="map-filter-btn px-3 py-1.5 rounded-full bg-white/10 text-slate-300 font-semibold hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Middle East</button>
+                    <div class="flex flex-wrap items-center gap-2 font-sans text-xs" role="group" aria-label="Trade Lane Filters">
+                        <button type="button" data-region="all" class="map-filter-btn active px-3.5 py-1.5 rounded-full bg-stark-primary text-white font-medium shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">All Corridors</button>
+                        <button type="button" data-region="na" class="map-filter-btn px-3.5 py-1.5 rounded-full bg-white/10 text-slate-300 font-medium hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">North America</button>
+                        <button type="button" data-region="eu" class="map-filter-btn px-3.5 py-1.5 rounded-full bg-white/10 text-slate-300 font-medium hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">European Union</button>
+                        <button type="button" data-region="asia" class="map-filter-btn px-3.5 py-1.5 rounded-full bg-white/10 text-slate-300 font-medium hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Asia-Pacific</button>
+                        <button type="button" data-region="me" class="map-filter-btn px-3.5 py-1.5 rounded-full bg-white/10 text-slate-300 font-medium hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Middle East</button>
                     </div>
                 </div>
 
@@ -365,7 +365,7 @@
                             <!-- Labeled Flag -->
                             <g transform="translate(12, -18)">
                                 <rect x="-4" y="-12" width="130" height="24" rx="4" fill="#0B0F17" stroke="#E11D48" stroke-width="1" opacity="0.95" />
-                                <text x="6" y="3" fill="#FFFFFF" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800">BANGLADESH (HQ)</text>
+                                <text x="6" y="3" fill="#FFFFFF" font-size="10" font-family="'Instrument Sans', sans-serif" font-weight="700">BANGLADESH (HQ)</text>
                             </g>
                         </g>
 
@@ -374,56 +374,56 @@
                         <g class="port-pin cursor-pointer group" data-route="route-ny" transform="translate(275, 170)" tabindex="0" role="button" aria-label="Port of New York">
                             <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
                             <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
-                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">New York</text>
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Instrument Sans', sans-serif" font-weight="500" class="group-hover:fill-white">New York</text>
                         </g>
 
                         <!-- 2. Los Angeles -->
                         <g class="port-pin cursor-pointer group" data-route="route-la" transform="translate(175, 185)" tabindex="0" role="button" aria-label="Port of Los Angeles">
                             <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
                             <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
-                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Los Angeles</text>
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Instrument Sans', sans-serif" font-weight="500" class="group-hover:fill-white">Los Angeles</text>
                         </g>
 
                         <!-- 3. Hamburg -->
                         <g class="port-pin cursor-pointer group" data-route="route-hamburg" transform="translate(505, 140)" tabindex="0" role="button" aria-label="Port of Hamburg">
                             <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
                             <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
-                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Hamburg</text>
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Instrument Sans', sans-serif" font-weight="500" class="group-hover:fill-white">Hamburg</text>
                         </g>
 
                         <!-- 4. UK (London / Felixstowe) -->
                         <g class="port-pin cursor-pointer group" data-route="route-uk" transform="translate(478, 145)" tabindex="0" role="button" aria-label="Port of Felixstowe">
                             <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
                             <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
-                            <text x="-48" y="16" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Felixstowe</text>
+                            <text x="-48" y="16" fill="#94A3B8" font-size="9" font-family="'Instrument Sans', sans-serif" font-weight="500" class="group-hover:fill-white">Felixstowe</text>
                         </g>
 
                         <!-- 5. Tokyo -->
                         <g class="port-pin cursor-pointer group" data-route="route-tokyo" transform="translate(845, 180)" tabindex="0" role="button" aria-label="Port of Tokyo">
                             <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
                             <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
-                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Tokyo</text>
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Instrument Sans', sans-serif" font-weight="500" class="group-hover:fill-white">Tokyo</text>
                         </g>
 
                         <!-- 6. Hong Kong -->
                         <g class="port-pin cursor-pointer group" data-route="route-hk" transform="translate(765, 235)" tabindex="0" role="button" aria-label="Port of Hong Kong">
                             <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
                             <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
-                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Hong Kong</text>
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Instrument Sans', sans-serif" font-weight="500" class="group-hover:fill-white">Hong Kong</text>
                         </g>
 
                         <!-- 7. Dubai -->
                         <g class="port-pin cursor-pointer group" data-route="route-dubai" transform="translate(605, 225)" tabindex="0" role="button" aria-label="Port of Dubai">
                             <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
                             <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
-                            <text x="-38" y="-8" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Dubai</text>
+                            <text x="-38" y="-8" fill="#94A3B8" font-size="9" font-family="'Instrument Sans', sans-serif" font-weight="500" class="group-hover:fill-white">Dubai</text>
                         </g>
 
                         <!-- 8. Sydney -->
                         <g class="port-pin cursor-pointer group" data-route="route-sydney" transform="translate(885, 405)" tabindex="0" role="button" aria-label="Port of Sydney">
                             <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
                             <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
-                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Sydney</text>
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Instrument Sans', sans-serif" font-weight="500" class="group-hover:fill-white">Sydney</text>
                         </g>
                     </svg>
 
@@ -432,12 +432,12 @@
                         <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
                             <div class="flex items-center gap-2">
                                 <span class="w-2 h-2 rounded-full bg-stark-primary animate-pulse" aria-hidden="true"></span>
-                                <span id="hud-country-name" class="font-display font-bold text-xs uppercase tracking-wider text-slate-300">Germany / Netherlands</span>
+                                <span id="hud-country-name" class="font-sans font-semibold text-xs uppercase tracking-wider text-slate-300">Germany / Netherlands</span>
                             </div>
                             <span id="hud-status" class="font-mono text-[10px] text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">Weekly Direct Discharge</span>
                         </div>
 
-                        <h4 id="hud-port-name" class="font-display font-extrabold text-base text-white">Port of Hamburg & Rotterdam (DEHAM / NLRTM)</h4>
+                        <h4 id="hud-port-name" class="font-display font-semibold text-base text-white tracking-tight">Port of Hamburg &amp; Rotterdam (DEHAM / NLRTM)</h4>
 
                         <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-white/10 text-xs">
                             <div>
@@ -493,7 +493,7 @@
             <!-- Capacity Dark Slate Container -->
             <div class="bg-stark-slate rounded-2xl p-8 lg:p-12 text-white mb-16 shadow-xl border border-slate-700/50">
                 <div class="text-center max-w-xl mx-auto mb-10">
-                    <h2 class="font-display font-bold text-2xl lg:text-3xl text-white tracking-tight uppercase text-balance">
+                    <h2 class="font-display font-semibold text-2xl lg:text-3xl text-white tracking-tight uppercase text-balance">
                         Monthly Production Capacity
                     </h2>
                     <div class="w-16 h-1 bg-stark-primary mx-auto mt-3"></div>
@@ -502,20 +502,20 @@
                 <!-- 4 Real Capacity Metrics -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
                     <div class="pt-4 md:pt-0">
-                        <div class="font-display font-black text-4xl lg:text-5xl text-white font-mono tabular-nums">9,600</div>
-                        <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-display font-semibold">Total Daily Units</div>
+                        <div class="font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight">9,600</div>
+                        <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-sans font-medium">Total Daily Units</div>
                     </div>
                     <div class="pt-4 md:pt-0">
-                        <div class="font-display font-black text-4xl lg:text-5xl text-white font-mono tabular-nums">7,106</div>
-                        <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-display font-semibold">Case Rolling Line</div>
+                        <div class="font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight">7,106</div>
+                        <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-sans font-medium">Case Rolling Line</div>
                     </div>
                     <div class="pt-4 md:pt-0">
-                        <div class="font-display font-black text-4xl lg:text-5xl text-white font-mono tabular-nums">7,124</div>
-                        <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-display font-semibold">Pocket Preparation</div>
+                        <div class="font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight">7,124</div>
+                        <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-sans font-medium">Pocket Preparation</div>
                     </div>
                     <div class="pt-4 md:pt-0">
-                        <div class="font-display font-black text-4xl lg:text-5xl text-white font-mono tabular-nums">7,124</div>
-                        <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-display font-semibold">Assembled & Checked</div>
+                        <div class="font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight">7,124</div>
+                        <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-sans font-medium">Assembled &amp; Checked</div>
                     </div>
                 </div>
             </div>
@@ -523,15 +523,15 @@
             <!-- Sister Concern Facility Heading -->
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                 <div>
-                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-stark-text tracking-tight text-balance">
-                        Integrated Sister Concern Facilities
+                    <h2 class="font-display font-medium text-3xl sm:text-4xl text-stark-text tracking-tight text-balance">
+                        Integrated <span class="font-serif italic font-normal text-stark-primary">Sister Concern</span> Facilities
                     </h2>
-                    <p class="text-sm text-stark-muted mt-2 text-pretty">
+                    <p class="text-base text-stark-muted mt-2 text-pretty font-sans">
                         6 dedicated production factories delivering vertical autonomy across luggage, bags, polymer molding, and printing.
                     </p>
                 </div>
                 <div class="text-xs font-mono text-slate-500">
-                    Inspected & Approved by FLAXA
+                    Inspected &amp; Approved by FLAXA
                 </div>
             </div>
 
@@ -609,19 +609,19 @@
             <!-- Header & Filter -->
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div>
-                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-stark-text tracking-tight text-balance">
-                        Featured Luggage & Travel Gear
+                    <h2 class="font-display font-medium text-3xl sm:text-4xl text-stark-text tracking-tight text-balance">
+                        Featured Luggage &amp; <span class="font-serif italic font-normal text-stark-primary">Travel Gear</span>
                     </h2>
-                    <p class="text-sm text-stark-muted mt-2 text-pretty">
+                    <p class="text-base text-stark-muted mt-2 text-pretty font-sans">
                         Engineered for international brand programs. Available for custom OEM specification and wholesale contract runs.
                     </p>
                 </div>
 
                 <!-- Semantic Filter Controls with Keyboard & Focus States -->
-                <div id="product-filter-group" class="flex flex-wrap items-center gap-2 font-display text-xs font-semibold" role="group" aria-label="Product Categories">
-                    <button type="button" data-filter="all" class="product-filter-btn active px-3.5 py-1.5 rounded-full bg-stark-primary text-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">All Products</button>
-                    <button type="button" data-filter="hard-shell" class="product-filter-btn px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Hard-Shell Spinners</button>
-                    <button type="button" data-filter="duffel" class="product-filter-btn px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Travel Duffels</button>
+                <div id="product-filter-group" class="flex flex-wrap items-center gap-2 font-sans text-xs font-medium" role="group" aria-label="Product Categories">
+                    <button type="button" data-filter="all" class="product-filter-btn active px-4 py-2 rounded-full bg-stark-primary text-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">All Products</button>
+                    <button type="button" data-filter="hard-shell" class="product-filter-btn px-4 py-2 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Hard-Shell Spinners</button>
+                    <button type="button" data-filter="duffel" class="product-filter-btn px-4 py-2 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Travel Duffels</button>
                 </div>
             </div>
 
@@ -766,10 +766,10 @@
                     </div>
 
                     <div class="space-y-3">
-                        <h3 class="font-display font-bold text-2xl text-white text-pretty">
-                            Direct Procurement & Contract Manufacturing
+                        <h3 class="font-display font-medium text-2xl sm:text-3xl text-white text-pretty tracking-tight">
+                            Direct Procurement &amp; <span class="font-serif italic font-normal text-rose-300">Contract Manufacturing</span>
                         </h3>
-                        <p class="text-xs text-slate-300 leading-relaxed font-sans text-pretty">
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-sans text-pretty">
                             Whether you require full private-label creation for an upcoming luggage collection or high-capacity OEM manufacturing, our merchandising and engineering teams provide rapid prototyping, material compounding, and complete FOB/CIF logistics.
                         </p>
                     </div>
@@ -777,12 +777,12 @@
                     <!-- Certifications Logos -->
                     <div id="certifications" class="pt-4 border-t border-white/10 scroll-mt-20">
                         <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-4">Accredited Compliance Standards</span>
-                        <div class="flex flex-wrap items-center gap-6">
-                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-bold text-white">ISO 9001:2015</div>
-                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-bold text-white">ISO 14001:2015</div>
-                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-bold text-white">amfori BSCI</div>
-                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-bold text-white">Sedex SMETA</div>
-                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-bold text-white">FSC Certified</div>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-semibold text-white">ISO 9001:2015</div>
+                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-semibold text-white">ISO 14001:2015</div>
+                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-semibold text-white">amfori BSCI</div>
+                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-semibold text-white">Sedex SMETA</div>
+                            <div class="px-3 py-1.5 rounded bg-white/10 border border-white/15 font-mono text-xs font-semibold text-white">FSC Certified</div>
                         </div>
                     </div>
                 </div>
@@ -790,37 +790,37 @@
                 <!-- Right: RFQ Form Container -->
                 <div class="lg:col-span-6 bg-white text-stark-text rounded-2xl p-8 lg:p-10 shadow-2xl border border-slate-200">
                     <div class="border-b border-slate-100 pb-4 mb-6">
-                        <h3 class="font-display font-extrabold text-2xl text-stark-text text-pretty">Request Factory Quotation</h3>
-                        <p class="text-xs text-stark-muted mt-1 text-pretty">Submit your project details for rapid engineering review and export price quotes.</p>
+                        <h3 class="font-display font-semibold text-2xl text-stark-text text-pretty tracking-tight">Request Factory Quotation</h3>
+                        <p class="text-sm text-slate-500 mt-1 text-pretty font-sans">Submit your project details for rapid engineering review and export price quotes.</p>
                     </div>
 
                     <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry received! Our export merchandising department will contact you within 24 hours.');">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label for="rfq-contact-name" class="block text-xs font-display font-semibold text-slate-700 mb-1">Contact Name *</label>
-                                <input type="text" id="rfq-contact-name" name="contact_name" autocomplete="name" required placeholder="e.g. John Doe…" class="w-full px-3.5 py-2.5 rounded-md border border-stark-border text-xs text-stark-text placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
+                                <label for="rfq-contact-name" class="block text-xs font-sans font-medium text-slate-700 mb-1.5">Contact Name *</label>
+                                <input type="text" id="rfq-contact-name" name="contact_name" autocomplete="name" required placeholder="e.g. John Doe…" class="w-full px-3.5 py-2.5 rounded-lg border border-stark-border text-sm text-stark-text font-sans placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
                             </div>
                             <div>
-                                <label for="rfq-company-name" class="block text-xs font-display font-semibold text-slate-700 mb-1">Company / Retail Brand *</label>
-                                <input type="text" id="rfq-company-name" name="company" autocomplete="organization" required placeholder="e.g. Globetrotter Gear Ltd.…" class="w-full px-3.5 py-2.5 rounded-md border border-stark-border text-xs text-stark-text placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="rfq-email" class="block text-xs font-display font-semibold text-slate-700 mb-1">Business Email *</label>
-                                <input type="email" id="rfq-email" name="email" autocomplete="email" spellcheck="false" required placeholder="procurement@company.com…" class="w-full px-3.5 py-2.5 rounded-md border border-stark-border text-xs text-stark-text placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
-                            </div>
-                            <div>
-                                <label for="rfq-country" class="block text-xs font-display font-semibold text-slate-700 mb-1">Destination Country *</label>
-                                <input type="text" id="rfq-country" name="country" autocomplete="country-name" required placeholder="e.g. United States, Germany…" class="w-full px-3.5 py-2.5 rounded-md border border-stark-border text-xs text-stark-text placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
+                                <label for="rfq-company-name" class="block text-xs font-sans font-medium text-slate-700 mb-1.5">Company / Retail Brand *</label>
+                                <input type="text" id="rfq-company-name" name="company" autocomplete="organization" required placeholder="e.g. Globetrotter Gear Ltd.…" class="w-full px-3.5 py-2.5 rounded-lg border border-stark-border text-sm text-stark-text font-sans placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label for="rfq-product-category" class="block text-xs font-display font-semibold text-slate-700 mb-1">Product Category</label>
-                                <select id="rfq-product-category" name="category" class="w-full px-3.5 py-2.5 rounded-md border border-stark-border text-xs text-stark-text bg-white focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
+                                <label for="rfq-email" class="block text-xs font-sans font-medium text-slate-700 mb-1.5">Business Email *</label>
+                                <input type="email" id="rfq-email" name="email" autocomplete="email" spellcheck="false" required placeholder="procurement@company.com…" class="w-full px-3.5 py-2.5 rounded-lg border border-stark-border text-sm text-stark-text font-sans placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
+                            </div>
+                            <div>
+                                <label for="rfq-country" class="block text-xs font-sans font-medium text-slate-700 mb-1.5">Destination Country *</label>
+                                <input type="text" id="rfq-country" name="country" autocomplete="country-name" required placeholder="e.g. United States, Germany…" class="w-full px-3.5 py-2.5 rounded-lg border border-stark-border text-sm text-stark-text font-sans placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="rfq-product-category" class="block text-xs font-sans font-medium text-slate-700 mb-1.5">Product Category</label>
+                                <select id="rfq-product-category" name="category" class="w-full px-3.5 py-2.5 rounded-lg border border-stark-border text-sm text-stark-text font-sans bg-white focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
                                     <option value="hard-shell">Hard-Shell Spinner Suitcases</option>
                                     <option value="backpacks">Technical / Laptop Backpacks</option>
                                     <option value="duffels">Travel Duffels & Holdalls</option>
@@ -829,8 +829,8 @@
                                 </select>
                             </div>
                             <div>
-                                <label for="rfq-quantity" class="block text-xs font-display font-semibold text-slate-700 mb-1">Target Quantity</label>
-                                <select id="rfq-quantity" name="target_quantity" class="w-full px-3.5 py-2.5 rounded-md border border-stark-border text-xs text-stark-text bg-white focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
+                                <label for="rfq-quantity" class="block text-xs font-sans font-medium text-slate-700 mb-1.5">Target Quantity</label>
+                                <select id="rfq-quantity" name="target_quantity" class="w-full px-3.5 py-2.5 rounded-lg border border-stark-border text-sm text-stark-text font-sans bg-white focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary">
                                     <option value="sample">1,000 - 5,000 units (Sample / Pilot)</option>
                                     <option value="medium">5,000 - 25,000 units</option>
                                     <option value="large">25,000 - 100,000 units</option>
@@ -840,11 +840,11 @@
                         </div>
 
                         <div>
-                            <label for="rfq-specs" class="block text-xs font-display font-semibold text-slate-700 mb-1">Project Specifications & Requirements</label>
-                            <textarea id="rfq-specs" name="specifications" rows="3" placeholder="Provide material preferences, target FOB pricing, required ship date, or customization requests…" class="w-full px-3.5 py-2.5 rounded-md border border-stark-border text-xs text-stark-text placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary"></textarea>
+                            <label for="rfq-specs" class="block text-xs font-sans font-medium text-slate-700 mb-1.5">Project Specifications & Requirements</label>
+                            <textarea id="rfq-specs" name="specifications" rows="3" placeholder="Provide material preferences, target FOB pricing, required ship date, or customization requests…" class="w-full px-3.5 py-2.5 rounded-lg border border-stark-border text-sm text-stark-text font-sans placeholder-slate-400 focus:outline-none focus:border-stark-primary focus:ring-1 focus:ring-stark-primary"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full py-3.5 rounded-md bg-stark-primary text-white font-display text-xs font-bold uppercase tracking-wider hover:bg-stark-primary-hover active:scale-[0.99] transition-[background-color,transform] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary shadow-md">
+                        <button type="submit" class="w-full py-3.5 rounded-lg bg-stark-primary text-white font-sans text-xs font-bold uppercase tracking-wider hover:bg-stark-primary-hover active:scale-[0.99] transition-[background-color,transform] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary shadow-md">
                             Submit RFQ for Manufacturing Review
                         </button>
 

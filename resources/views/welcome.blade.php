@@ -66,30 +66,6 @@
                     <span class="flex items-center gap-1.5"><span class="text-emerald-400" aria-hidden="true">&#10003;</span> FSC Chain-of-Custody</span>
                 </div>
             </div>
-
-            <!-- Hero Slider Bottom Controls: Slide Indicators + Play/Pause Toggle -->
-            <div class="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono text-slate-400">
-                <div class="flex items-center gap-3" role="tablist" aria-label="Hero Background Slider">
-                    <button type="button" class="hero-dot-btn active flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 text-white font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" data-slide="0" aria-label="Slide 1: Industrial Luggage">
-                        <span class="w-2 h-2 rounded-full bg-stark-primary" aria-hidden="true"></span>
-                        <span>01 / Travel Gear</span>
-                    </button>
-                    <button type="button" class="hero-dot-btn flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" data-slide="1" aria-label="Slide 2: Hard-Shell Spinners">
-                        <span class="w-2 h-2 rounded-full bg-slate-500" aria-hidden="true"></span>
-                        <span>02 / Hard-Shell Spinners</span>
-                    </button>
-                    <button type="button" class="hero-dot-btn flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" data-slide="2" aria-label="Slide 3: Manufacturing Facility">
-                        <span class="w-2 h-2 rounded-full bg-slate-500" aria-hidden="true"></span>
-                        <span>03 / Plant Compound</span>
-                    </button>
-                </div>
-
-                <!-- Slide Auto-Advance / Pause Control for Accessibility -->
-                <button type="button" id="hero-slider-toggle" class="flex items-center gap-2 px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" aria-label="Pause background slider">
-                    <span id="hero-slider-toggle-icon" class="w-2 h-2 rounded-sm bg-emerald-400 animate-pulse motion-reduce:animate-none" aria-hidden="true"></span>
-                    <span id="hero-slider-toggle-text">Auto Playing</span>
-                </button>
-            </div>
         </div>
     </section>
 

@@ -213,54 +213,255 @@
                 From our manufacturing hubs in Brahmanbaria through Chittagong Port (BDCGP), Stark luggage and bags reach retail shelves across 7+ key international markets.
             </p>
 
-            <!-- Vector Map with Radiating Export Arcs from Bangladesh -->
-            <div class="relative mt-12 bg-slate-900 rounded-3xl p-8 lg:p-14 overflow-hidden border border-slate-800 shadow-2xl">
-                <!-- Ambient map grid -->
-                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-
-                <div class="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-6 text-left">
-                    <!-- North America -->
-                    <div class="p-5 rounded-xl bg-white/5 border border-white/10 hover:border-stark-blue transition-colors">
-                        <div class="flex items-center gap-2 text-stark-blue font-mono text-xs uppercase tracking-wider">
-                            <span class="w-2 h-2 rounded-full bg-stark-blue" aria-hidden="true"></span>
-                            North America
+            <!-- Interactive Animated World Trade Map Canvas -->
+            <div id="trade-map-container" class="relative mt-12 bg-slate-950 rounded-3xl p-4 sm:p-8 overflow-hidden border border-slate-800 shadow-2xl">
+                <!-- Map Top Bar: Live Status & Regional Corridors Filter -->
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6 relative z-20 pb-4 border-b border-white/10">
+                    <div class="flex items-center gap-3 text-left">
+                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse motion-reduce:animate-none" aria-hidden="true"></div>
+                        <div>
+                            <span class="font-display font-bold text-xs uppercase tracking-wider text-white">Live Maritime & Export Network</span>
+                            <span class="text-[11px] font-mono text-slate-400 block">Origin: Chittagong Sea Port (BDCGP) &bull; Direct Carrier Contracts</span>
                         </div>
-                        <h4 class="font-display font-bold text-lg text-white mt-2">USA & Canada</h4>
-                        <p class="text-xs text-slate-400 mt-1">Ports: New York, Los Angeles, Vancouver. High-volume contract luggage & spinner runs.</p>
-                        <span class="inline-block mt-3 font-mono text-[10px] text-slate-500">Transit: 28-35 Days FOB</span>
                     </div>
 
-                    <!-- European Union -->
-                    <div class="p-5 rounded-xl bg-white/5 border border-white/10 hover:border-stark-blue transition-colors">
-                        <div class="flex items-center gap-2 text-stark-blue font-mono text-xs uppercase tracking-wider">
-                            <span class="w-2 h-2 rounded-full bg-stark-blue" aria-hidden="true"></span>
-                            European Union
-                        </div>
-                        <h4 class="font-display font-bold text-lg text-white mt-2">Germany, UK & EU</h4>
-                        <p class="text-xs text-slate-400 mt-1">Ports: Hamburg, Rotterdam, Felixstowe. amfori BSCI compliant production lines.</p>
-                        <span class="inline-block mt-3 font-mono text-[10px] text-slate-500">Transit: 22-26 Days FOB</span>
+                    <!-- Region Selector Buttons -->
+                    <div class="flex flex-wrap items-center gap-2 font-display text-xs" role="group" aria-label="Trade Lane Filters">
+                        <button type="button" data-region="all" class="map-filter-btn active px-3 py-1.5 rounded-full bg-stark-primary text-white font-semibold shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">All Corridors</button>
+                        <button type="button" data-region="na" class="map-filter-btn px-3 py-1.5 rounded-full bg-white/10 text-slate-300 font-semibold hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">North America</button>
+                        <button type="button" data-region="eu" class="map-filter-btn px-3 py-1.5 rounded-full bg-white/10 text-slate-300 font-semibold hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">European Union</button>
+                        <button type="button" data-region="asia" class="map-filter-btn px-3 py-1.5 rounded-full bg-white/10 text-slate-300 font-semibold hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Asia-Pacific</button>
+                        <button type="button" data-region="me" class="map-filter-btn px-3 py-1.5 rounded-full bg-white/10 text-slate-300 font-semibold hover:bg-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Middle East</button>
                     </div>
+                </div>
 
-                    <!-- East Asia -->
-                    <div class="p-5 rounded-xl bg-white/5 border border-white/10 hover:border-stark-blue transition-colors">
-                        <div class="flex items-center gap-2 text-stark-blue font-mono text-xs uppercase tracking-wider">
-                            <span class="w-2 h-2 rounded-full bg-stark-blue" aria-hidden="true"></span>
-                            East Asia
-                        </div>
-                        <h4 class="font-display font-bold text-lg text-white mt-2">Japan & Hong Kong</h4>
-                        <p class="text-xs text-slate-400 mt-1">Ports: Yokohama, Tokyo, Hong Kong. Premium finish and tight AQL 1.5 standards.</p>
-                        <span class="inline-block mt-3 font-mono text-[10px] text-slate-500">Transit: 14-18 Days FOB</span>
-                    </div>
+                <!-- SVG Animated Vector Map -->
+                <div class="relative w-full aspect-[2/1] min-h-[380px] lg:min-h-[460px] flex items-center justify-center">
+                    <svg viewBox="0 0 1000 520" class="w-full h-full select-none" xmlns="http://www.w3.org/2000/svg" aria-label="Interactive world export map">
+                        <defs>
+                            <!-- Glow Filter for Moving Cargo Pulses -->
+                            <filter id="glow-crimson" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+                                <feMerge>
+                                    <feMergeNode in="blur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
+                                <feMerge>
+                                    <feMergeNode in="blur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
 
-                    <!-- Middle East & GCC -->
-                    <div class="p-5 rounded-xl bg-white/5 border border-white/10 hover:border-stark-blue transition-colors">
-                        <div class="flex items-center gap-2 text-stark-blue font-mono text-xs uppercase tracking-wider">
-                            <span class="w-2 h-2 rounded-full bg-stark-blue" aria-hidden="true"></span>
-                            Middle East
+                            <!-- Gradient for Trade Lanes -->
+                            <linearGradient id="gradient-route" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#E11D48" stop-opacity="0.9" />
+                                <stop offset="50%" stop-color="#2563EB" stop-opacity="0.7" />
+                                <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.9" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Subtle Latitude & Longitude Coordinate Grid -->
+                        <g stroke="#1E293B" stroke-width="0.75" stroke-dasharray="2,6" opacity="0.4" aria-hidden="true">
+                            <line x1="0" y1="130" x2="1000" y2="130" />
+                            <line x1="0" y1="260" x2="1000" y2="260" />
+                            <line x1="0" y1="390" x2="1000" y2="390" />
+                            <line x1="200" y1="0" x2="200" y2="520" />
+                            <line x1="400" y1="0" x2="400" y2="520" />
+                            <line x1="600" y1="0" x2="600" y2="520" />
+                            <line x1="800" y1="0" x2="800" y2="520" />
+                        </g>
+
+                        <!-- Continents Landmass Silhouettes -->
+                        <g fill="#0F172A" stroke="#1E293B" stroke-width="1" opacity="0.85" aria-hidden="true">
+                            <!-- North America -->
+                            <path d="M 120 70 L 260 50 L 320 80 L 280 130 L 310 160 L 290 200 L 220 220 L 200 290 L 150 240 L 90 180 L 80 120 Z" />
+                            <!-- Greenland -->
+                            <path d="M 330 30 L 400 35 L 380 90 L 320 80 Z" />
+                            <!-- South America -->
+                            <path d="M 230 300 L 330 320 L 360 380 L 300 480 L 250 440 L 220 360 Z" />
+                            <!-- Europe -->
+                            <path d="M 450 90 L 560 80 L 590 130 L 520 180 L 440 180 L 430 130 Z" />
+                            <!-- British Isles -->
+                            <path d="M 460 115 L 485 110 L 480 150 L 455 140 Z" />
+                            <!-- Africa -->
+                            <path d="M 460 200 L 580 190 L 610 270 L 560 410 L 490 390 L 440 260 Z" />
+                            <!-- Eurasia / Asia -->
+                            <path d="M 590 80 L 880 70 L 910 150 L 840 250 L 760 300 L 680 270 L 600 240 L 600 130 Z" />
+                            <!-- Japan -->
+                            <path d="M 860 150 L 880 160 L 870 210 L 845 200 Z" />
+                            <!-- Indian Subcontinent / SE Asia Highlight -->
+                            <path d="M 640 220 L 720 220 L 710 320 L 670 330 L 640 260 Z" fill="#131D31" stroke="#334155" />
+                            <!-- Australia -->
+                            <path d="M 780 360 L 910 350 L 920 440 L 800 450 Z" />
+                        </g>
+
+                        <!-- Curved Maritime Trade Paths -->
+                        <g class="trade-paths" fill="none" aria-hidden="true">
+                            <!-- Route to New York (USA) -->
+                            <path id="path-ny" class="route-path" d="M 675 245 C 550 70, 380 80, 275 170" stroke="url(#gradient-route)" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.75" />
+                            <!-- Route to Los Angeles (USA) -->
+                            <path id="path-la" class="route-path" d="M 675 245 C 490 50, 250 70, 175 185" stroke="url(#gradient-route)" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.75" />
+                            <!-- Route to Hamburg (Germany) -->
+                            <path id="path-hamburg" class="route-path" d="M 675 245 C 600 120, 560 120, 505 140" stroke="url(#gradient-route)" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.75" />
+                            <!-- Route to UK -->
+                            <path id="path-uk" class="route-path" d="M 675 245 C 590 120, 530 120, 478 145" stroke="url(#gradient-route)" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.75" />
+                            <!-- Route to Dubai (UAE) -->
+                            <path id="path-dubai" class="route-path" d="M 675 245 C 640 220, 620 220, 605 225" stroke="url(#gradient-route)" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.75" />
+                            <!-- Route to Tokyo (Japan) -->
+                            <path id="path-tokyo" class="route-path" d="M 675 245 C 740 180, 800 170, 845 180" stroke="url(#gradient-route)" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.75" />
+                            <!-- Route to Hong Kong -->
+                            <path id="path-hk" class="route-path" d="M 675 245 C 710 230, 740 230, 765 235" stroke="url(#gradient-route)" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.75" />
+                            <!-- Route to Sydney (Australia) -->
+                            <path id="path-sydney" class="route-path" d="M 675 245 C 760 320, 830 360, 885 405" stroke="url(#gradient-route)" stroke-width="1.8" stroke-dasharray="4,4" opacity="0.75" />
+                        </g>
+
+                        <!-- Moving Cargo Pulse Particles (Continuous Flow via SVG animateMotion) -->
+                        <g class="cargo-pulses" aria-hidden="true">
+                            <!-- Pulse to NY -->
+                            <circle r="3.5" fill="#38BDF8" filter="url(#glow-cyan)">
+                                <animateMotion dur="4.2s" repeatCount="indefinite" path="M 675 245 C 550 70, 380 80, 275 170" />
+                            </circle>
+                            <!-- Pulse to LA -->
+                            <circle r="3.5" fill="#38BDF8" filter="url(#glow-cyan)">
+                                <animateMotion dur="4.8s" repeatCount="indefinite" path="M 675 245 C 490 50, 250 70, 175 185" />
+                            </circle>
+                            <!-- Pulse to Hamburg -->
+                            <circle r="3.5" fill="#E11D48" filter="url(#glow-crimson)">
+                                <animateMotion dur="3.4s" repeatCount="indefinite" path="M 675 245 C 600 120, 560 120, 505 140" />
+                            </circle>
+                            <!-- Pulse to UK -->
+                            <circle r="3" fill="#E11D48" filter="url(#glow-crimson)">
+                                <animateMotion dur="3.7s" repeatCount="indefinite" path="M 675 245 C 590 120, 530 120, 478 145" />
+                            </circle>
+                            <!-- Pulse to Dubai -->
+                            <circle r="3.5" fill="#38BDF8" filter="url(#glow-cyan)">
+                                <animateMotion dur="2.5s" repeatCount="indefinite" path="M 675 245 C 640 220, 620 220, 605 225" />
+                            </circle>
+                            <!-- Pulse to Tokyo -->
+                            <circle r="3.5" fill="#E11D48" filter="url(#glow-crimson)">
+                                <animateMotion dur="3.1s" repeatCount="indefinite" path="M 675 245 C 740 180, 800 170, 845 180" />
+                            </circle>
+                            <!-- Pulse to Hong Kong -->
+                            <circle r="3" fill="#38BDF8" filter="url(#glow-cyan)">
+                                <animateMotion dur="2.2s" repeatCount="indefinite" path="M 675 245 C 710 230, 740 230, 765 235" />
+                            </circle>
+                            <!-- Pulse to Sydney -->
+                            <circle r="3.5" fill="#38BDF8" filter="url(#glow-cyan)">
+                                <animateMotion dur="3.9s" repeatCount="indefinite" path="M 675 245 C 760 320, 830 360, 885 405" />
+                            </circle>
+                        </g>
+
+                        <!-- Origin Node: Bangladesh (Dhaka / Chittagong Port) -->
+                        <g id="origin-bangladesh" class="cursor-pointer" transform="translate(675, 245)">
+                            <!-- Dynamic Radar Pulse Waves -->
+                            <circle id="radar-ring-1" r="10" fill="none" stroke="#E11D48" stroke-width="2" opacity="0.8" />
+                            <circle id="radar-ring-2" r="14" fill="none" stroke="#E11D48" stroke-width="1.5" opacity="0.5" />
+                            <!-- Core Beacon -->
+                            <circle r="6" fill="#E11D48" />
+                            <circle r="2.5" fill="#FFFFFF" />
+
+                            <!-- Labeled Flag -->
+                            <g transform="translate(12, -18)">
+                                <rect x="-4" y="-12" width="130" height="24" rx="4" fill="#0B0F17" stroke="#E11D48" stroke-width="1" opacity="0.95" />
+                                <text x="6" y="3" fill="#FFFFFF" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800">BANGLADESH (HQ)</text>
+                            </g>
+                        </g>
+
+                        <!-- Destination Port Pins (Interactive with Hover & Tooltip) -->
+                        <!-- 1. New York -->
+                        <g class="port-pin cursor-pointer group" data-route="route-ny" transform="translate(275, 170)" tabindex="0" role="button" aria-label="Port of New York">
+                            <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
+                            <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">New York</text>
+                        </g>
+
+                        <!-- 2. Los Angeles -->
+                        <g class="port-pin cursor-pointer group" data-route="route-la" transform="translate(175, 185)" tabindex="0" role="button" aria-label="Port of Los Angeles">
+                            <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
+                            <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Los Angeles</text>
+                        </g>
+
+                        <!-- 3. Hamburg -->
+                        <g class="port-pin cursor-pointer group" data-route="route-hamburg" transform="translate(505, 140)" tabindex="0" role="button" aria-label="Port of Hamburg">
+                            <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
+                            <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Hamburg</text>
+                        </g>
+
+                        <!-- 4. UK (London / Felixstowe) -->
+                        <g class="port-pin cursor-pointer group" data-route="route-uk" transform="translate(478, 145)" tabindex="0" role="button" aria-label="Port of Felixstowe">
+                            <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
+                            <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+                            <text x="-48" y="16" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Felixstowe</text>
+                        </g>
+
+                        <!-- 5. Tokyo -->
+                        <g class="port-pin cursor-pointer group" data-route="route-tokyo" transform="translate(845, 180)" tabindex="0" role="button" aria-label="Port of Tokyo">
+                            <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
+                            <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Tokyo</text>
+                        </g>
+
+                        <!-- 6. Hong Kong -->
+                        <g class="port-pin cursor-pointer group" data-route="route-hk" transform="translate(765, 235)" tabindex="0" role="button" aria-label="Port of Hong Kong">
+                            <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
+                            <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Hong Kong</text>
+                        </g>
+
+                        <!-- 7. Dubai -->
+                        <g class="port-pin cursor-pointer group" data-route="route-dubai" transform="translate(605, 225)" tabindex="0" role="button" aria-label="Port of Dubai">
+                            <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
+                            <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+                            <text x="-38" y="-8" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Dubai</text>
+                        </g>
+
+                        <!-- 8. Sydney -->
+                        <g class="port-pin cursor-pointer group" data-route="route-sydney" transform="translate(885, 405)" tabindex="0" role="button" aria-label="Port of Sydney">
+                            <circle r="8" fill="#2563EB" opacity="0.25" class="group-hover:opacity-60 transition-opacity" />
+                            <circle r="4" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+                            <text x="8" y="4" fill="#94A3B8" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" class="group-hover:fill-white">Sydney</text>
+                        </g>
+                    </svg>
+
+                    <!-- Interactive Live Dispatch HUD Card -->
+                    <div id="map-hud-card" class="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-md bg-slate-900/95 backdrop-blur-md border border-white/15 rounded-xl p-5 text-white shadow-2xl text-left pointer-events-auto transition-[opacity,transform]">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-stark-primary animate-pulse" aria-hidden="true"></span>
+                                <span id="hud-country-name" class="font-display font-bold text-xs uppercase tracking-wider text-slate-300">Germany / Netherlands</span>
+                            </div>
+                            <span id="hud-status" class="font-mono text-[10px] text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">Weekly Direct Discharge</span>
                         </div>
-                        <h4 class="font-display font-bold text-lg text-white mt-2">UAE & Saudi Arabia</h4>
-                        <p class="text-xs text-slate-400 mt-1">Ports: Jebel Ali, Dammam. Heavy-duty luggage and pilgrimage holdalls.</p>
-                        <span class="inline-block mt-3 font-mono text-[10px] text-slate-500">Transit: 10-14 Days FOB</span>
+
+                        <h4 id="hud-port-name" class="font-display font-extrabold text-base text-white">Port of Hamburg & Rotterdam (DEHAM / NLRTM)</h4>
+
+                        <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-white/10 text-xs">
+                            <div>
+                                <span class="text-[11px] text-slate-400 block font-sans">FOB Transit Time:</span>
+                                <span id="hud-transit-time" class="font-mono font-bold text-stark-primary">22-26 Days FOB</span>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-slate-400 block font-sans">Annual Capacity:</span>
+                                <span id="hud-volume" class="font-mono font-bold text-white">520,000 Pcs/Year</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-2.5">
+                            <span class="text-[11px] text-slate-400 block font-sans">Primary Export Cargo:</span>
+                            <span id="hud-cargo-type" class="text-xs text-slate-200 font-medium">amfori BSCI Certified Luggage Collections</span>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-[10px] font-mono text-slate-400">Hover or tap any port to inspect route</span>
+                            <a href="#inquiry" class="inline-flex items-center gap-1 text-xs font-display font-bold text-stark-primary hover:text-rose-300 transition-colors">
+                                Book Route Quota &rarr;
+                            </a>
+                        </div>
                     </div>
                 </div>
 

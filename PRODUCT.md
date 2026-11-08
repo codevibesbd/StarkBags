@@ -36,3 +36,4 @@ Stark Bag Industries Ltd. is an export-scale luggage, backpack, and travel gear 
 - **Head Office:** House #07, Road #02, Sector #03, Uttara, Dhaka-1230, Bangladesh.
 - **Manufacturing Plants:** Khatihata (Rashid Super Market / Budhal), Brahmanbaria Sadar & Kuttapara, Sarail, Brahmanbaria, Bangladesh.
 - **Website:** https://starkbags.com/
+

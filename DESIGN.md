@@ -237,3 +237,4 @@ The system uses **flat surfaces with crisp 1px borders** at rest, reserving elev
 - **Don't** allow third-party WordPress spam or unvetted news content into the application.
 - **Don't** stack heavy borders with dark offset drop shadows ("ghost cards").
 - **Don't** use carousels or timed auto-rotating tabs that hide content from users.
+

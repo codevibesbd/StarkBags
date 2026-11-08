@@ -7,7 +7,7 @@
     'badge' => null
 ])
 
-<div class="group relative bg-white border border-stark-border rounded-xl p-5 flex flex-col justify-between transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-slate-300">
+<div {{ $attributes->merge(['class' => 'group relative bg-white border border-stark-border rounded-xl p-5 flex flex-col justify-between transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-slate-300']) }}>
     <!-- Card Header / Tags -->
     <div class="flex items-center justify-between mb-4">
         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-display font-semibold uppercase tracking-wider bg-slate-100 text-slate-700">

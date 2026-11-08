@@ -418,19 +418,19 @@
                 </div>
 
                 <!-- Semantic Filter Controls with Keyboard & Focus States -->
-                <div class="flex flex-wrap items-center gap-2 font-display text-xs font-semibold" role="group" aria-label="Product Categories">
-                    <button type="button" class="px-3.5 py-1.5 rounded-full bg-stark-primary text-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">All Products</button>
-                    <button type="button" class="px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Hard-Shell Spinners</button>
-                    <button type="button" class="px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Travel Duffels</button>
-                    <button type="button" class="px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Backpacks</button>
+                <div id="product-filter-group" class="flex flex-wrap items-center gap-2 font-display text-xs font-semibold" role="group" aria-label="Product Categories">
+                    <button type="button" data-filter="all" class="product-filter-btn active px-3.5 py-1.5 rounded-full bg-stark-primary text-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">All Products</button>
+                    <button type="button" data-filter="hard-shell" class="product-filter-btn px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Hard-Shell Spinners</button>
+                    <button type="button" data-filter="duffel" class="product-filter-btn px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">Travel Duffels</button>
                 </div>
             </div>
 
             <!-- 8 Products Grid (4 Columns x 2 Rows) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Product 1 -->
                 <x-product-card
-                    title="AeroLite 20\" Carry-On Spinner"
+                    data-category="hard-shell"
+                    title="AeroLite 20-Inch Carry-On Spinner"
                     category="Hard-Shell Suitcase"
                     material="Bayer Polycarbonate Shell"
                     image="https://starkbags.com/wp-content/uploads/2025/02/1-3-1024x1024.png"
@@ -440,6 +440,7 @@
 
                 <!-- Product 2 -->
                 <x-product-card
+                    data-category="duffel"
                     title="Voyager 60L Weekender Duffel"
                     category="Travel Duffel"
                     material="1000D Ballistic Nylon"
@@ -450,6 +451,7 @@
 
                 <!-- Product 3 -->
                 <x-product-card
+                    data-category="duffel"
                     title="All-Terrain Wheeled Holdall"
                     category="Rolling Duffel"
                     material="High-Density Poly Fabric"
@@ -460,6 +462,7 @@
 
                 <!-- Product 4 -->
                 <x-product-card
+                    data-category="duffel"
                     title="Navigator Maritime Travel Holdall"
                     category="Travel Duffel"
                     material="Heavy-Duty Ripstop Canvas"
@@ -470,8 +473,9 @@
 
                 <!-- Product 5 -->
                 <x-product-card
+                    data-category="hard-shell"
                     title="Carbonite 3-Piece Spinner Set"
-                    category="Luggage Trio (20\"/24\"/28\")"
+                    category="Luggage Trio (20in, 24in, 28in)"
                     material="Textured Scratch-Resistant PC"
                     image="https://starkbags.com/wp-content/uploads/2025/02/1-2.png"
                     badge="Best Seller"
@@ -480,6 +484,7 @@
 
                 <!-- Product 6 -->
                 <x-product-card
+                    data-category="hard-shell"
                     title="Botanical Mint Luggage Duo"
                     category="Spinner Suitcase Duo"
                     material="Hybrid ABS/PC Formulation"
@@ -490,6 +495,7 @@
 
                 <!-- Product 7 -->
                 <x-product-card
+                    data-category="hard-shell"
                     title="Executive Stealth Hardcase"
                     category="Business Carry-On"
                     material="Anodized Frame + PC Shell"
@@ -500,6 +506,7 @@
 
                 <!-- Product 8 -->
                 <x-product-card
+                    data-category="hard-shell"
                     title="Blush Rose Gold Luxury Spinner"
                     category="Fashion Luggage"
                     material="Gloss Finish Polycarbonate"
@@ -508,6 +515,35 @@
                     :features="['Color-Matched Zippers & Trim', 'Ultra-Glide Ball Bearing Wheels', 'Velvet-Touch Lined Interior']"
                 />
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const filterButtons = document.querySelectorAll('.product-filter-btn');
+                    const cards = document.querySelectorAll('#product-grid > div');
+
+                    filterButtons.forEach(btn => {
+                        btn.addEventListener('click', function () {
+                            const filter = this.getAttribute('data-filter');
+
+                            filterButtons.forEach(b => {
+                                b.classList.remove('bg-stark-primary', 'text-white', 'shadow-sm', 'active');
+                                b.classList.add('bg-slate-100', 'text-slate-700');
+                            });
+                            this.classList.add('bg-stark-primary', 'text-white', 'shadow-sm', 'active');
+                            this.classList.remove('bg-slate-100', 'text-slate-700');
+
+                            cards.forEach(card => {
+                                const cat = card.getAttribute('data-category');
+                                if (filter === 'all' || cat === filter) {
+                                    card.style.display = 'flex';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                });
+            </script>
         </div>
     </section>
 

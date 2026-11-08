@@ -239,3 +239,4 @@ export function initTradeMap() {
         ease: 'power1.out'
     });
 }
+

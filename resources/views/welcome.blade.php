@@ -5,18 +5,32 @@
 @section('content')
 
     <!-- ===================================================================== -->
-    <!-- SECTION 1: HERO (The Industrial Atelier)                              -->
+    <!-- SECTION 1: HERO (The Industrial Atelier with Background Slider)       -->
     <!-- 1 Section per Viewport on 1440x900                                    -->
     <!-- ===================================================================== -->
-    <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center bg-stark-obsidian text-white overflow-hidden py-20 scroll-mt-20">
-        <!-- Hero Background: Authentic luggage imagery with subtle ambient dark vignette -->
-        <div class="absolute inset-0 z-0 opacity-25">
-            <img src="https://starkbags.com/wp-content/uploads/2025/02/footer-slider_0001-1024x427.jpg" alt="Stark Industrial Luggage Showcase" width="1024" height="427" class="w-full h-full object-cover object-center filter grayscale contrast-125">
+    <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center bg-stark-obsidian text-white overflow-hidden py-24 scroll-mt-20">
+        <!-- Hero Background Slider Layers -->
+        <div id="hero-slider" class="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
+            <!-- Slide 1: Premium Luggage & Travel Gear in Studio Lighting -->
+            <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+                <img src="https://starkbags.com/wp-content/uploads/2025/02/footer-slider_0001-1024x427.jpg" alt="Stark Industrial Luggage Showcase" width="1440" height="720" class="w-full h-full object-cover object-center filter grayscale-[30%] contrast-115">
+            </div>
+            <!-- Slide 2: Hard-Shell Suitcase Production -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
+                <img src="https://starkbags.com/wp-content/uploads/2025/02/footer-slider_0002-1024x427.jpg" alt="Hard-Shell Luggage Series" width="1440" height="720" class="w-full h-full object-cover object-center filter grayscale-[30%] contrast-115">
+            </div>
+            <!-- Slide 3: Active Bag Manufacturing Assembly Line -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
+                <img src="https://starkbags.com/wp-content/uploads/2025/02/footer-slider_0000-1024x427.jpg" alt="Advanced Bag Manufacturing Facility" width="1440" height="720" class="w-full h-full object-cover object-center filter grayscale-[30%] contrast-115">
+            </div>
         </div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-r from-stark-obsidian via-stark-obsidian/90 to-stark-obsidian/60"></div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-8 space-y-6">
+        <!-- High-Contrast Architectural Dark Overlays -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-r from-stark-obsidian via-stark-obsidian/85 to-stark-obsidian/50 pointer-events-none"></div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-t from-stark-obsidian via-transparent to-stark-obsidian/40 pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
+            <div class="max-w-3xl space-y-6">
                 <!-- Trust Pill Badge -->
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-mono text-slate-300">
                     <span class="w-2 h-2 rounded-full bg-stark-primary animate-pulse motion-reduce:animate-none" aria-hidden="true"></span>
@@ -53,43 +67,28 @@
                 </div>
             </div>
 
-            <!-- Hero Floating Spec Card -->
-            <div class="lg:col-span-4 hidden lg:block">
-                <div class="bg-stark-slate/90 backdrop-blur-md border border-white/15 rounded-2xl p-6 text-white space-y-5 shadow-2xl">
-                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
-                        <span class="font-display font-bold text-sm uppercase tracking-wider text-stark-primary">Factory Specification</span>
-                        <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">Active Production</span>
-                    </div>
-
-                    <div class="space-y-4 text-xs">
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-400">Total Workforce:</span>
-                            <span class="font-mono font-bold text-white text-sm">5,000+ Workers</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-400">Integrated Units:</span>
-                            <span class="font-mono font-bold text-white text-sm">6 Sister Concerns</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-400">Primary Port:</span>
-                            <span class="font-mono font-bold text-white text-sm">Chittagong Port (BDCGP)</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-400">Main Export Hubs:</span>
-                            <span class="font-mono font-bold text-white text-sm">USA, EU, Japan, GCC</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-400">Quality Lead Time:</span>
-                            <span class="font-mono font-bold text-white text-sm">Strict AQL 1.5 / 2.5</span>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 border-t border-white/10">
-                        <a href="#products" class="w-full inline-flex items-center justify-center py-2.5 rounded bg-white/10 hover:bg-white/20 text-xs font-display font-bold text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary">
-                            Inspect Product Lineup &darr;
-                        </a>
-                    </div>
+            <!-- Hero Slider Bottom Controls: Slide Indicators + Play/Pause Toggle -->
+            <div class="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono text-slate-400">
+                <div class="flex items-center gap-3" role="tablist" aria-label="Hero Background Slider">
+                    <button type="button" class="hero-dot-btn active flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 text-white font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" data-slide="0" aria-label="Slide 1: Industrial Luggage">
+                        <span class="w-2 h-2 rounded-full bg-stark-primary" aria-hidden="true"></span>
+                        <span>01 / Travel Gear</span>
+                    </button>
+                    <button type="button" class="hero-dot-btn flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" data-slide="1" aria-label="Slide 2: Hard-Shell Spinners">
+                        <span class="w-2 h-2 rounded-full bg-slate-500" aria-hidden="true"></span>
+                        <span>02 / Hard-Shell Spinners</span>
+                    </button>
+                    <button type="button" class="hero-dot-btn flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" data-slide="2" aria-label="Slide 3: Manufacturing Facility">
+                        <span class="w-2 h-2 rounded-full bg-slate-500" aria-hidden="true"></span>
+                        <span>03 / Plant Compound</span>
+                    </button>
                 </div>
+
+                <!-- Slide Auto-Advance / Pause Control for Accessibility -->
+                <button type="button" id="hero-slider-toggle" class="flex items-center gap-2 px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-mono transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" aria-label="Pause background slider">
+                    <span id="hero-slider-toggle-icon" class="w-2 h-2 rounded-sm bg-emerald-400 animate-pulse motion-reduce:animate-none" aria-hidden="true"></span>
+                    <span id="hero-slider-toggle-text">Auto Playing</span>
+                </button>
             </div>
         </div>
     </section>

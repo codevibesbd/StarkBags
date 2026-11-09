@@ -476,21 +476,21 @@
                 </div>
 
                 <!-- 4 Real Capacity Metrics -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <div id="capacity-metrics-grid" class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
                     <div class="pt-4 md:pt-0">
-                        <div class="font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight">9,600</div>
+                        <div class="capacity-counter font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight" data-target="9600">9,600</div>
                         <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-sans font-medium">Total Daily Units</div>
                     </div>
                     <div class="pt-4 md:pt-0">
-                        <div class="font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight">7,106</div>
+                        <div class="capacity-counter font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight" data-target="7106">7,106</div>
                         <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-sans font-medium">Case Rolling Line</div>
                     </div>
                     <div class="pt-4 md:pt-0">
-                        <div class="font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight">7,124</div>
+                        <div class="capacity-counter font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight" data-target="7124">7,124</div>
                         <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-sans font-medium">Pocket Preparation</div>
                     </div>
                     <div class="pt-4 md:pt-0">
-                        <div class="font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight">7,124</div>
+                        <div class="capacity-counter font-display font-bold text-4xl lg:text-5xl text-white font-mono tabular-nums tracking-tight" data-target="7124">7,124</div>
                         <div class="text-xs uppercase tracking-wider text-slate-400 mt-2 font-sans font-medium">Assembled &amp; Checked</div>
                     </div>
                 </div>

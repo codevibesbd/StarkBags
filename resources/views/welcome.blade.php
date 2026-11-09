@@ -11,17 +11,17 @@
     <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center bg-stark-obsidian text-white overflow-hidden py-24 scroll-mt-20">
         <!-- Hero Background Slider Layers -->
         <div id="hero-slider" class="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
-            <!-- Slide 1: Premium Luggage & Travel Gear in Studio Lighting -->
+            <!-- Slide 1: Executive Leather Travel Duffle Bag -->
             <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
-                <img src="https://starkbags.com/wp-content/uploads/2025/02/footer-slider_0001-1024x427.jpg" alt="Stark Industrial Luggage Showcase" width="1440" height="720" class="w-full h-full object-cover object-center filter grayscale-[30%] contrast-115">
+                <img src="https://starkbags.com/wp-content/uploads/2025/02/1df95a05-f698-484e-81be-1293d02b9dd2.png" alt="Stark Leather Travel Duffle Bag" width="1920" height="1080" class="w-full h-full object-cover object-center filter contrast-110">
             </div>
-            <!-- Slide 2: Hard-Shell Suitcase Production -->
+            <!-- Slide 2: Hard-Shell Spinner Luggage -->
             <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
-                <img src="https://starkbags.com/wp-content/uploads/2025/02/footer-slider_0002-1024x427.jpg" alt="Hard-Shell Luggage Series" width="1440" height="720" class="w-full h-full object-cover object-center filter grayscale-[30%] contrast-115">
+                <img src="https://starkbags.com/wp-content/uploads/2025/02/17ee4799-e078-4727-9f87-10b937bcd85d.png" alt="Stark Hard-Shell Spinner Suitcase" width="1920" height="1080" class="w-full h-full object-cover object-center filter contrast-110">
             </div>
-            <!-- Slide 3: Active Bag Manufacturing Assembly Line -->
+            <!-- Slide 3: Commuter & Outdoor Travel Backpack -->
             <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
-                <img src="https://starkbags.com/wp-content/uploads/2025/02/footer-slider_0000-1024x427.jpg" alt="Advanced Bag Manufacturing Facility" width="1440" height="720" class="w-full h-full object-cover object-center filter grayscale-[30%] contrast-115">
+                <img src="https://starkbags.com/wp-content/uploads/2025/02/def7518e-8735-4e7c-89e7-ecf05def42e4.png" alt="Stark Outdoor Commuter Backpack" width="1024" height="576" class="w-full h-full object-cover object-center filter contrast-110">
             </div>
         </div>
 

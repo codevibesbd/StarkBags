@@ -31,12 +31,6 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
             <div class="max-w-3xl space-y-6">
-                <!-- Trust Pill Badge -->
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-mono text-slate-300">
-                    <span class="w-2 h-2 rounded-full bg-stark-primary animate-pulse motion-reduce:animate-none" aria-hidden="true"></span>
-                    <span>1.5&nbsp;M+ Units Monthly Throughput &bull; Bangladesh to Global Ports</span>
-                </div>
-
                 <!-- Headline (No Eyebrow Rule: Headline speaks with its own scale) -->
                 <h1 class="font-display font-medium text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08] text-balance">
                     Engineering <span class="font-serif italic font-normal text-rose-300">Export-Grade</span> Travel Gear &amp; Luggage at Scale.

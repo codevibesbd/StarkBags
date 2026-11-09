@@ -70,3 +70,4 @@ function animateCounters(counters) {
 
     requestAnimationFrame(update);
 }
+

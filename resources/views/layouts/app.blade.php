@@ -124,7 +124,6 @@
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
                 <p>&copy;&nbsp;{{ date('Y') }} Stark Bag Industries Ltd. All rights reserved.</p>
                 <div class="flex items-center gap-6">
-                    <span class="text-slate-500">Engineered with Laravel & Tailwind CSS</span>
                     <a href="#inquiry" class="text-stark-primary hover:underline rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary">Request OEM Catalog</a>
                 </div>
             </div>

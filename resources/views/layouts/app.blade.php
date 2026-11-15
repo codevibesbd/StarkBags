@@ -14,7 +14,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-stark-bg text-stark-text font-sans antialiased selection:bg-stark-primary selection:text-white">
+<body class="bg-stark-bg text-stark-text font-sans antialiased selection:bg-stark-primary selection:text-white flex flex-col min-h-screen">
 
     <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-stark-primary focus:text-white focus:rounded focus:ring-2 focus:ring-white">
@@ -25,7 +25,7 @@
     <header class="sticky top-0 z-50 bg-stark-obsidian/95 backdrop-blur-md border-b border-white/10 transition-colors">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
-            <a href="{{ url('/') }}" class="flex items-center gap-3 group rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" aria-label="Stark Bag Industries Homepage">
+            <a href="{{ route('home') }}" class="flex items-center gap-3 group rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary" aria-label="Stark Bag Industries Homepage">
                 <div class="w-10 h-10 rounded-lg bg-stark-primary flex items-center justify-center font-display font-bold text-white text-xl tracking-tight shadow-sm group-hover:bg-stark-primary-hover transition-colors" aria-hidden="true">
                     S
                 </div>
@@ -36,31 +36,58 @@
             </a>
 
             <!-- Desktop Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 font-sans text-xs tracking-wider uppercase font-medium text-slate-300" aria-label="Main Navigation">
-                <a href="#hero" class="hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">HOME</a>
-                <a href="#capabilities" class="hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">CAPABILITIES</a>
-                <a href="#global-presence" class="hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">GLOBAL EXPORT</a>
-                <a href="#facilities" class="hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">SISTER CONCERNS</a>
-                <a href="#products" class="hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">PRODUCTS</a>
-                <a href="#certifications" class="hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">COMPLIANCE</a>
+            <nav class="hidden lg:flex items-center gap-7 font-sans text-xs tracking-wider uppercase font-medium text-slate-300" aria-label="Main Navigation">
+                <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'text-white font-semibold' : 'text-slate-300 hover:text-white' }} rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">HOME</a>
+                <a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'text-rose-300 font-semibold border-b border-stark-primary' : 'text-slate-300 hover:text-white' }} rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">ABOUT</a>
+                <a href="{{ route('home') }}#capabilities" class="text-slate-300 hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">CAPABILITIES</a>
+                <a href="{{ route('home') }}#global-presence" class="text-slate-300 hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">GLOBAL EXPORT</a>
+                <a href="{{ route('home') }}#facilities" class="text-slate-300 hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">SISTER CONCERNS</a>
+                <a href="{{ route('home') }}#products" class="text-slate-300 hover:text-white rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">PRODUCTS</a>
+                <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'text-rose-300 font-semibold border-b border-stark-primary' : 'text-slate-300 hover:text-white' }} rounded px-1 py-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors">CONTACT</a>
             </nav>
 
-            <!-- CTA Button -->
-            <div class="flex items-center gap-4">
-                <a href="#inquiry" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-stark-primary text-white font-sans text-xs font-semibold tracking-wide hover:bg-stark-primary-hover active:scale-[0.98] transition-[background-color,transform] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-sm">
+            <!-- Desktop CTA & Mobile Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="{{ route('contact') }}" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-stark-primary text-white font-sans text-xs font-semibold tracking-wide hover:bg-stark-primary-hover active:scale-[0.98] transition-[background-color,transform] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-sm">
                     Inquire for OEM / Export
                 </a>
+
+                <!-- Mobile Menu Button -->
+                <button type="button" id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stark-primary transition-colors" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle Navigation Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path id="menu-icon-bars" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-nav" class="hidden lg:hidden bg-stark-obsidian border-b border-white/10 px-6 py-6 transition-all">
+            <nav class="flex flex-col gap-4 font-sans text-sm tracking-wider uppercase font-medium text-slate-300" aria-label="Mobile Navigation">
+                <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'text-white font-semibold' : 'text-slate-300' }} py-1 hover:text-white transition-colors">HOME</a>
+                <a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'text-rose-300 font-semibold' : 'text-slate-300' }} py-1 hover:text-white transition-colors">ABOUT</a>
+                <a href="{{ route('home') }}#capabilities" class="py-1 hover:text-white transition-colors">CAPABILITIES</a>
+                <a href="{{ route('home') }}#global-presence" class="py-1 hover:text-white transition-colors">GLOBAL EXPORT</a>
+                <a href="{{ route('home') }}#facilities" class="py-1 hover:text-white transition-colors">SISTER CONCERNS</a>
+                <a href="{{ route('home') }}#products" class="py-1 hover:text-white transition-colors">PRODUCTS</a>
+                <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'text-rose-300 font-semibold' : 'text-slate-300' }} py-1 hover:text-white transition-colors">CONTACT</a>
+                <div class="pt-4 border-t border-white/10">
+                    <a href="{{ route('contact') }}" class="w-full inline-flex items-center justify-center px-5 py-3 rounded-lg bg-stark-primary text-white font-sans text-xs font-semibold tracking-wide hover:bg-stark-primary-hover transition-colors">
+                        Inquire for OEM / Export
+                    </a>
+                </div>
+            </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main id="main-content">
+    <main id="main-content" class="flex-grow">
         @yield('content')
     </main>
 
     <!-- Industrial Footer -->
-    <footer class="bg-stark-obsidian text-slate-400 border-t border-white/10 pt-16 pb-12 font-sans">
+    <footer class="bg-stark-obsidian text-slate-400 border-t border-white/10 pt-16 pb-12 font-sans mt-auto">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Col 1: Brand Info -->
@@ -84,12 +111,12 @@
                 <div>
                     <h4 class="font-sans text-xs font-semibold uppercase tracking-wider text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="#hero" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Company Overview</a></li>
-                        <li><a href="#capabilities" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Production Capabilities</a></li>
-                        <li><a href="#global-presence" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">International Trade Footprint</a></li>
-                        <li><a href="#facilities" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Sister Concern Factories</a></li>
-                        <li><a href="#products" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Luggage &amp; Bag Catalog</a></li>
-                        <li><a href="#certifications" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Compliance &amp; Accreditations</a></li>
+                        <li><a href="{{ route('home') }}" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Home Page</a></li>
+                        <li><a href="{{ route('about') }}" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">About Starkbags &amp; Heritage</a></li>
+                        <li><a href="{{ route('home') }}#capabilities" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Production Capabilities</a></li>
+                        <li><a href="{{ route('home') }}#facilities" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Sister Concern Factories</a></li>
+                        <li><a href="{{ route('home') }}#products" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Luggage &amp; Bag Catalog</a></li>
+                        <li><a href="{{ route('contact') }}" class="hover:text-white rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary transition-colors">Contact &amp; Plant Audits</a></li>
                     </ul>
                 </div>
 
@@ -124,11 +151,31 @@
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
                 <p>&copy;&nbsp;{{ date('Y') }} Stark Bag Industries Ltd. All rights reserved.</p>
                 <div class="flex items-center gap-6">
-                    <a href="#inquiry" class="text-stark-primary hover:underline rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary">Request OEM Catalog</a>
+                    <a href="{{ route('about') }}" class="text-slate-400 hover:text-white transition-colors">Company Heritage</a>
+                    <a href="{{ route('contact') }}" class="text-stark-primary hover:underline rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stark-primary">Request Factory Quote</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+            const iconBars = document.getElementById('menu-icon-bars');
+            const iconClose = document.getElementById('menu-icon-close');
+
+            if (menuBtn && mobileNav) {
+                menuBtn.addEventListener('click', function () {
+                    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                    menuBtn.setAttribute('aria-expanded', !isExpanded);
+                    mobileNav.classList.toggle('hidden');
+                    iconBars.classList.toggle('hidden');
+                    iconClose.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

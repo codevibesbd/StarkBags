@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/contact', [ContactController::class, 'show'])->name('contact');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');

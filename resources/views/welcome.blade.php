@@ -13,15 +13,15 @@
         <div id="hero-slider" class="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
             <!-- Slide 1: Executive Leather Travel Duffle Bag -->
             <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
-                <img src="https://starkbags.com/wp-content/uploads/2025/02/1df95a05-f698-484e-81be-1293d02b9dd2.png" alt="Stark Leather Travel Duffle Bag" width="1920" height="1080" class="w-full h-full object-cover object-center filter contrast-110">
+                <img src="{{ asset('images/hero/leather-duffle-hero.jpg') }}" alt="Stark Leather Travel Duffle Bag" width="1920" height="1080" class="w-full h-full object-cover object-center filter contrast-110">
             </div>
             <!-- Slide 2: Hard-Shell Spinner Luggage -->
             <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
-                <img src="https://starkbags.com/wp-content/uploads/2025/02/17ee4799-e078-4727-9f87-10b937bcd85d.png" alt="Stark Hard-Shell Spinner Suitcase" width="1920" height="1080" class="w-full h-full object-cover object-center filter contrast-110">
+                <img src="{{ asset('images/hero/hardshell-luggage-hero.jpg') }}" alt="Stark Hard-Shell Spinner Suitcase" width="1920" height="1080" class="w-full h-full object-cover object-center filter contrast-110">
             </div>
             <!-- Slide 3: Commuter & Outdoor Travel Backpack -->
             <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
-                <img src="https://starkbags.com/wp-content/uploads/2025/02/def7518e-8735-4e7c-89e7-ecf05def42e4.png" alt="Stark Outdoor Commuter Backpack" width="1024" height="576" class="w-full h-full object-cover object-center filter contrast-110">
+                <img src="{{ asset('images/hero/travel-backpack-hero.jpg') }}" alt="Stark Outdoor Commuter Backpack" width="1024" height="576" class="w-full h-full object-cover object-center filter contrast-110">
             </div>
         </div>
 
@@ -120,7 +120,7 @@
                     <!-- Pillar 1: Who We Are -->
                     <div class="bg-white border border-stark-border rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row gap-6 items-center shadow-sm hover:border-slate-300 transition-colors">
                         <div class="w-full md:w-48 h-36 rounded-xl overflow-hidden bg-slate-100 shrink-0">
-                            <img src="https://starkbags.com/wp-content/uploads/2025/02/rider-3-768x432-1.webp" alt="Rider Leather Bags Factory Facility" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
+                            <img src="{{ asset('images/facilities/assembly-stitching.jpg') }}" alt="Rider Leather Bags Factory Facility" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
                             <h3 class="font-display font-semibold text-xl text-stark-text tracking-tight text-pretty">Who We Are</h3>
@@ -136,7 +136,7 @@
                     <!-- Pillar 2: What We Do -->
                     <div class="bg-white border border-stark-border rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row gap-6 items-center shadow-sm hover:border-slate-300 transition-colors">
                         <div class="w-full md:w-48 h-36 rounded-xl overflow-hidden bg-slate-100 shrink-0">
-                            <img src="https://starkbags.com/wp-content/uploads/2025/02/Sensibal-qyx49htq0vcm9ibd8wky9ejdb0t3obd66qik4jxhn4.jpg" alt="Polymer Molding Factory Plant" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
+                            <img src="{{ asset('images/facilities/polymer-molding-thumb.jpg') }}" alt="Polymer Molding Factory Plant" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
                             <h3 class="font-display font-semibold text-xl text-stark-text tracking-tight text-pretty">What We Do</h3>
@@ -152,7 +152,7 @@
                     <!-- Pillar 3: Industry 4.0 & Sustainability -->
                     <div class="bg-white border border-stark-border rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row gap-6 items-center shadow-sm hover:border-slate-300 transition-colors">
                         <div class="w-full md:w-48 h-36 rounded-xl overflow-hidden bg-slate-100 shrink-0">
-                            <img src="https://starkbags.com/wp-content/uploads/2025/02/20241223_165355-1-768x491-1.jpg" alt="Sustainable Industry 4.0 Equipment" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
+                            <img src="{{ asset('images/facilities/eco-facility-thumb.jpg') }}" alt="Sustainable Industry 4.0 Equipment" width="192" height="144" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1">
                             <h3 class="font-display font-semibold text-xl text-stark-text tracking-tight text-pretty">Sustainable Industry 4.0</h3>
@@ -513,7 +513,7 @@
                     specialty="Luggage & Leathercraft"
                     location="Brahmanbaria Sadar, Bangladesh"
                     capacity="650,000 Pcs/Mo"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/rider-3-768x432-1.webp"
+                    image="{{ asset('images/facilities/facility-rider-leather.jpg') }}"
                     description="Primary manufacturing unit for hard-shell spinner suitcases, executive leather travel bags, and reinforced duffels with automated assembly lines."
                 />
 
@@ -523,7 +523,7 @@
                     specialty="Technical Backpacks"
                     location="Kuttapara, Sarail, Bangladesh"
                     capacity="400,000 Pcs/Mo"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/WhatsApp-Image-2023-08-29-at-6-qyxjgku1si9ln1n9nvuvzukk5iawqc8zqjrcnari4w.jpg"
+                    image="{{ asset('images/facilities/facility-victor-backpacks.jpg') }}"
                     description="High-speed sewing plant specializing in commuter backpacks, laptop sleeves, daypacks, and water-repellent sports bags."
                 />
 
@@ -533,7 +533,7 @@
                     specialty="Polymer & Shell Molding"
                     location="Brahmanbaria, Bangladesh"
                     capacity="300,000 Shells/Mo"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/Sensibal-qyx49htq0vcm9ibd8wky9ejdb0t3obd66qik4jxhn4.jpg"
+                    image="{{ asset('images/facilities/facility-sensible-polymer.jpg') }}"
                     description="Heavy injection molding and vacuum sheet thermoforming unit producing 100% Bayer Polycarbonate, ABS, and PP suitcase shells."
                 />
 
@@ -543,7 +543,7 @@
                     specialty="Hardware & Extrusions"
                     location="Brahmanbaria, Bangladesh"
                     capacity="Full Supply Integration"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/20241223_165355-1-768x491-1.jpg"
+                    image="{{ asset('images/facilities/facility-premier-hardware.jpg') }}"
                     description="Custom tooling and hardware component fabrication: aluminum telescoping trolley tubes, 360-degree silent spinner wheels, and corner guards."
                 />
 
@@ -553,7 +553,7 @@
                     specialty="Packaging & Zippers"
                     location="Budhal, Brahmanbaria"
                     capacity="1,500,000 Pcs/Mo"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/wmremove-transformed-scaled-qyyty5j84b9dwrclks0pt92a0iuos88culrdtupevq.jpeg"
+                    image="{{ asset('images/facilities/facility-rider-packaging.jpg') }}"
                     description="In-house production of 5-ply export master cartons, polybags, hangtags, and heavy-duty #8 and #10 coil zipper assemblies."
                 />
 
@@ -563,7 +563,7 @@
                     specialty="Screen & Digital Printing"
                     location="Brahmanbaria, Bangladesh"
                     capacity="50,000 Imprints/Day"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/footer-slider_0000-1024x427.jpg"
+                    image="{{ asset('images/facilities/facility-sohagpur-printing.jpg') }}"
                     description="Textile embellishment plant equipped with automated carousel screen printing, silicone branding, heat transfers, and embroidery."
                 />
             </div>
@@ -603,7 +603,7 @@
                     title="AeroLite 20-Inch Carry-On Spinner"
                     category="Hard-Shell Suitcase"
                     material="Bayer Polycarbonate Shell"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/1-3-1024x1024.png"
+                    image="{{ asset('images/products/stark-aero-20.jpg') }}"
                     badge="TSA Approved"
                     :features="['Silent 360° Double Wheels', 'Aluminum Telescopic Handle', 'Expandable Interior Divider']"
                 />
@@ -614,7 +614,7 @@
                     title="Voyager 60L Weekender Duffel"
                     category="Travel Duffel"
                     material="1000D Ballistic Nylon"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/2-3-1024x1024.png"
+                    image="{{ asset('images/products/stark-executive-duffel.jpg') }}"
                     badge="Water Repellent"
                     :features="['YKK #10 Lockable Zippers', 'Reinforced Webbed Handles', 'Separate Shoe Compartment']"
                 />
@@ -625,7 +625,7 @@
                     title="All-Terrain Wheeled Holdall"
                     category="Rolling Duffel"
                     material="High-Density Poly Fabric"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/3-3.png"
+                    image="{{ asset('images/products/stark-explorer-holdall.jpg') }}"
                     badge="Heavy Duty"
                     :features="['Oversized Inline Skate Wheels', 'Rigid Molded Base Plate', 'Padded Ergonomic Pull Grip']"
                 />
@@ -636,7 +636,7 @@
                     title="Navigator Maritime Travel Holdall"
                     category="Travel Duffel"
                     material="Heavy-Duty Ripstop Canvas"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/4-3.png"
+                    image="{{ asset('images/products/stark-nomad-backpack.jpg') }}"
                     badge="Contract Export"
                     :features="['Reinforced Base Skids', 'Detachable Padded Shoulder Strap', 'Internal Wet Gear Pocket']"
                 />
@@ -647,7 +647,7 @@
                     title="Carbonite 3-Piece Spinner Set"
                     category="Luggage Trio (20in, 24in, 28in)"
                     material="Textured Scratch-Resistant PC"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/1-2.png"
+                    image="{{ asset('images/products/stark-hybrid-trunk.jpg') }}"
                     badge="Best Seller"
                     :features="['Nest-Inside Storage System', 'Corner Impact Protectors', 'Custom Color Matching']"
                 />
@@ -658,7 +658,7 @@
                     title="Botanical Mint Luggage Duo"
                     category="Spinner Suitcase Duo"
                     material="Hybrid ABS/PC Formulation"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/2-2.png"
+                    image="{{ asset('images/products/stark-vapour-24.jpg') }}"
                     badge="Lightweight"
                     :features="['25% Lighter Shell Compound', 'Built-in Weight Indicator Option', 'Smooth Dual Spinner Casters']"
                 />
@@ -669,7 +669,7 @@
                     title="Executive Stealth Hardcase"
                     category="Business Carry-On"
                     material="Anodized Frame + PC Shell"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/3-2.png"
+                    image="{{ asset('images/products/stark-horizon-28.jpg') }}"
                     badge="Premium"
                     :features="['Dual Integrated TSA Latches', 'Slow-Release Spring Handles', 'Suit Packing Foldout']"
                 />
@@ -680,7 +680,7 @@
                     title="Blush Rose Gold Luxury Spinner"
                     category="Fashion Luggage"
                     material="Gloss Finish Polycarbonate"
-                    image="https://starkbags.com/wp-content/uploads/2025/02/4-2.png"
+                    image="{{ asset('images/products/stark-apex-tactical.jpg') }}"
                     badge="Retail Grade"
                     :features="['Color-Matched Zippers & Trim', 'Ultra-Glide Ball Bearing Wheels', 'Velvet-Touch Lined Interior']"
                 />
@@ -727,7 +727,7 @@
                 <!-- Left: Factory Floor Showcase Photo -->
                 <div class="lg:col-span-6 space-y-6">
                     <div class="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl aspect-[16/10] bg-slate-900">
-                        <img src="https://starkbags.com/wp-content/uploads/2025/02/3.jpg" alt="Stark Bag Active Manufacturing Assembly Floor" width="640" height="400" loading="lazy" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/factory/factory-assembly-floor.jpg') }}" alt="Stark Bag Active Manufacturing Assembly Floor" width="640" height="400" loading="lazy" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4 text-xs font-mono text-slate-300 flex items-center justify-between">
                             <span>Main Assembly Hall &bull; Plant Unit #02</span>

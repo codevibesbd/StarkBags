@@ -96,3 +96,4 @@ class DebugEndpointProtectionTest extends TestCase
         $response->assertDontSee('.php');
     }
 }
+

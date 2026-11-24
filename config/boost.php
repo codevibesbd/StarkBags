@@ -29,3 +29,4 @@ return [
     'browser_logs_watcher' => env('APP_ENV') === 'local' && (bool) env('BOOST_BROWSER_LOGS_WATCHER', true),
 
 ];
+
